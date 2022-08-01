@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     
     func updateWeatherInfo(latitude: Double, longitude: Double) {
         let session = URLSession.shared
-        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=9dc585ecc48e43d2d2420f0b3d434e7d")!
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&units=metric&appid=9dc585ecc48e43d2d2420f0b3d434e7d")!
         let task = session.dataTask(with: url) { data, response, error in
             guard error == nil else {
                 print("DataTask error: \(String(describing: error))")
