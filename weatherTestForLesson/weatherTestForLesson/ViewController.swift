@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         }
     }
     func updateScreen(temp: Double, city: String, description: String) {
-        tempLabel.text = String(temp)
+        tempLabel.text = "\(String(Int(temp)))ºC"
         cityLabel.text = city
         weatherDescription.text = description
     }
